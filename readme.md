@@ -1,4 +1,4 @@
-# 13-Bus for Grid Support v1
+# 13-Bus for Grid Support v2
 
 <img src="13busGridSupport.png" width="500"/>
 
@@ -15,10 +15,22 @@ Three identical simple microgrids (MGs) are attached with switches as shown in t
 PCC to a central node and two longer, symmetrical, lines branch out to a load bus and a bus with inverter based 
 resources (shown in green).
 
+Two additional MGs are also attached via switches (negligible impedance). They have equivalent generation and load on 
+a single node so that they do not import or export power. However, they are able to participate in support of the 
+Bulk Power System (BPS).
+
+## Inverters 
+ - S_rated: 180 kVA per phase
+ - P_rated: 150 kW per phase
+ - P_Out: 0.5*P_rated = 75kW per phase
+
+## Loads
+ Loads are 1/2 of that specified by the powerdata.csv file.
+
 ## Distribution System
 The distribution system is a slightly modified IEEE 13-bus system. For simplicity, the loads are all converted to wye 
-connected, constant PQ, spot loads. The bus numbers have also been renumbered, the image shows the new bus numbers in bold with the old bus names also 
-shown.
+connected, constant PQ, spot loads. The bus numbers have also been renumbered, the image shows the new bus numbers in 
+bold with the old bus names also shown.
 To simulate the distributed load, a node is added between 1/4 the way down the line between 632 and 671 (2 and 6) 
 having 2/3 of the total distributed load. 1/3 of the distributed load is added to node 671 (6). See p. 56 of 
 "Distribution System Modeling and Analysis" by Kersting.
