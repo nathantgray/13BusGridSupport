@@ -1,0 +1,14 @@
+# file...... output/var_losses.csv
+# date...... Thu Mar 16 14:31:21 2023
+# user...... nathangray
+# host...... (null)
+# group..... class=overhead_line
+# trigger... (none)
+# interval.. 1
+# limit..... 0
+# property.. timestamp,sum(power_losses.imag)
+2001-08-01 12:00:00 PDT,+98245.6528624
+2001-08-01 12:00:01 PDT,+98245.6528612
+2001-08-01 12:00:02 PDT,+98245.6528605
+2001-08-01 12:00:03 PDT,+98245.6528602
+2001-08-01 12:00:04 PDT,+98245.6528607

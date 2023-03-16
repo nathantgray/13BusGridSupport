@@ -1,0 +1,14 @@
+# file...... output/sub_power.csv
+# date...... Thu Mar 16 14:31:32 2023
+# user...... nathangray
+# host...... (null)
+# group..... class=meter and groupid=0
+# trigger... (none)
+# interval.. 1
+# limit..... 0
+# property.. timestamp,sum(measured_power.real)
+2001-08-01 12:00:00 PDT,+3065086.00211
+2001-08-01 12:00:01 PDT,+3065086.00209
+2001-08-01 12:00:02 PDT,+3065086.00212
+2001-08-01 12:00:03 PDT,+3065086.00201
+2001-08-01 12:00:04 PDT,+3065086.00211
