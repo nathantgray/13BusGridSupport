@@ -37,7 +37,7 @@ object fault_check {
 object eventgen {
 	name bps_fault;
 	fault_type "SW-ABC"; //type of fault for the object to induce
-	manual_outages "sw_fault,2001-08-01 12:00:45,2001-08-01 12:01:15";
+	manual_outages "sw_fault,2001-08-01 12:00:45,2001-08-01 13:01:15";
 	//first time is when the switch will open, the second time is when it will close
 }// bps_fault
 
@@ -48,22 +48,22 @@ object meter {
 	nominal_voltage 2401.7771198288433;
 	groupid 0;
 	bustype SWING;
-	voltage_A 2521.8659758202857+0d;
-	voltage_B 2521.8659758202857-120d;
-	voltage_C 2521.8659758202857+120d;
+	voltage_A 2497.848204621997+0d;  // 1.04 pu
+	voltage_B 2497.848204621997-120d;
+	voltage_C 2497.848204621997+120d;
 }// source_equivalence
 
 object line_configuration {
 	name transmission_equivalence;
-	z11 0+0.4j;
+	z11 0+0.3467j;
 	z12 0+0j;
 	z13 0+0j;
 	z21 0+0j;
-	z22 0+0.4j;
+	z22 0+0.3467j;
 	z23 0+0j;
 	z31 0+0j;
 	z32 0+0j;
-	z33 0+0.4j;
+	z33 0+0.3467j;
 }// transmission_equivalence
 
 object switch {
@@ -1577,105 +1577,105 @@ object meter {
 object player {
 	name inv_20A_player_3;
 	parent inv_20A;
-	file players/inv_20_q.player;
+	file players/inv_20_q_a.player;
 	property Q_Out;
 }// inv_20A_player_3
 
 object player {
 	name inv_20B_player_3;
 	parent inv_20B;
-	file players/inv_20_q.player;
+	file players/inv_20_q_b.player;
 	property Q_Out;
 }// inv_20B_player_3
 
 object player {
 	name inv_20C_player_3;
 	parent inv_20C;
-	file players/inv_20_q.player;
+	file players/inv_20_q_c.player;
 	property Q_Out;
 }// inv_20C_player_3
 
 object player {
 	name inv_23A_player_3;
 	parent inv_23A;
-	file players/inv_23_q.player;
+	file players/inv_23_q_a.player;
 	property Q_Out;
 }// inv_23A_player_3
 
 object player {
 	name inv_23B_player_3;
 	parent inv_23B;
-	file players/inv_23_q.player;
+	file players/inv_23_q_b.player;
 	property Q_Out;
 }// inv_23B_player_3
 
 object player {
 	name inv_23C_player_3;
 	parent inv_23C;
-	file players/inv_23_q.player;
+	file players/inv_23_q_c.player;
 	property Q_Out;
 }// inv_23C_player_3
 
 object player {
 	name inv_26A_player_3;
 	parent inv_26A;
-	file players/inv_26_q.player;
+	file players/inv_26_q_a.player;
 	property Q_Out;
 }// inv_26A_player_3
 
 object player {
 	name inv_26B_player_3;
 	parent inv_26B;
-	file players/inv_26_q.player;
+	file players/inv_26_q_b.player;
 	property Q_Out;
 }// inv_26B_player_3
 
 object player {
 	name inv_26C_player_3;
 	parent inv_26C;
-	file players/inv_26_q.player;
+	file players/inv_26_q_c.player;
 	property Q_Out;
 }// inv_26C_player_3
 
 object player {
 	name inv_29A_player_3;
 	parent inv_29A;
-	file players/inv_29_q.player;
+	file players/inv_29_q_a.player;
 	property Q_Out;
 }// inv_29A_player_3
 
 object player {
 	name inv_29B_player_3;
 	parent inv_29B;
-	file players/inv_29_q.player;
+	file players/inv_29_q_b.player;
 	property Q_Out;
 }// inv_29B_player_3
 
 object player {
 	name inv_29C_player_3;
 	parent inv_29C;
-	file players/inv_29_q.player;
+	file players/inv_29_q_c.player;
 	property Q_Out;
 }// inv_29C_player_3
 
 object player {
 	name inv_30A_player_3;
 	parent inv_30A;
-	file players/inv_30_q.player;
+	file players/inv_30_q_a.player;
 	property Q_Out;
 }// inv_30A_player_3
 
 object player {
 	name inv_30B_player_3;
 	parent inv_30B;
-	file players/inv_30_q.player;
+	file players/inv_30_q_b.player;
 	property Q_Out;
 }// inv_30B_player_3
 
 object player {
 	name inv_30C_player_3;
 	parent inv_30C;
-	file players/inv_30_q.player;
+	file players/inv_30_q_c.player;
 	property Q_Out;
 }// inv_30C_player_3
 
@@ -1731,7 +1731,7 @@ object inverter {
 	name inv_23A;
 	parent inv_23_meter;
 	phases AN;
-	rated_power 180000.0;
+	rated_power 195000.0;
 	inverter_type FOUR_QUADRANT;
 	four_quadrant_control_mode CONSTANT_PQ;
 	generator_status ONLINE;
@@ -1747,7 +1747,7 @@ object inverter {
 	name inv_23B;
 	parent inv_23_meter;
 	phases BN;
-	rated_power 180000.0;
+	rated_power 195000.0;
 	inverter_type FOUR_QUADRANT;
 	four_quadrant_control_mode CONSTANT_PQ;
 	generator_status ONLINE;
@@ -1763,7 +1763,7 @@ object inverter {
 	name inv_23C;
 	parent inv_23_meter;
 	phases CN;
-	rated_power 180000.0;
+	rated_power 195000.0;
 	inverter_type FOUR_QUADRANT;
 	four_quadrant_control_mode CONSTANT_PQ;
 	generator_status ONLINE;
@@ -1779,7 +1779,7 @@ object inverter {
 	name inv_26A;
 	parent inv_26_meter;
 	phases AN;
-	rated_power 180000.0;
+	rated_power 210000.0;
 	inverter_type FOUR_QUADRANT;
 	four_quadrant_control_mode CONSTANT_PQ;
 	generator_status ONLINE;
@@ -1795,7 +1795,7 @@ object inverter {
 	name inv_26B;
 	parent inv_26_meter;
 	phases BN;
-	rated_power 180000.0;
+	rated_power 210000.0;
 	inverter_type FOUR_QUADRANT;
 	four_quadrant_control_mode CONSTANT_PQ;
 	generator_status ONLINE;
@@ -1811,7 +1811,7 @@ object inverter {
 	name inv_26C;
 	parent inv_26_meter;
 	phases CN;
-	rated_power 180000.0;
+	rated_power 210000.0;
 	inverter_type FOUR_QUADRANT;
 	four_quadrant_control_mode CONSTANT_PQ;
 	generator_status ONLINE;
@@ -1827,7 +1827,7 @@ object inverter {
 	name inv_29A;
 	parent inv_29_meter;
 	phases AN;
-	rated_power 180000.0;
+	rated_power 225000.0;
 	inverter_type FOUR_QUADRANT;
 	four_quadrant_control_mode CONSTANT_PQ;
 	generator_status ONLINE;
@@ -1843,7 +1843,7 @@ object inverter {
 	name inv_29B;
 	parent inv_29_meter;
 	phases BN;
-	rated_power 180000.0;
+	rated_power 225000.0;
 	inverter_type FOUR_QUADRANT;
 	four_quadrant_control_mode CONSTANT_PQ;
 	generator_status ONLINE;
@@ -1859,7 +1859,7 @@ object inverter {
 	name inv_29C;
 	parent inv_29_meter;
 	phases CN;
-	rated_power 180000.0;
+	rated_power 225000.0;
 	inverter_type FOUR_QUADRANT;
 	four_quadrant_control_mode CONSTANT_PQ;
 	generator_status ONLINE;
@@ -1875,7 +1875,7 @@ object inverter {
 	name inv_30A;
 	parent inv_30_meter;
 	phases AN;
-	rated_power 180000.0;
+	rated_power 240000.0;
 	inverter_type FOUR_QUADRANT;
 	four_quadrant_control_mode CONSTANT_PQ;
 	generator_status ONLINE;
@@ -1891,7 +1891,7 @@ object inverter {
 	name inv_30B;
 	parent inv_30_meter;
 	phases BN;
-	rated_power 180000.0;
+	rated_power 240000.0;
 	inverter_type FOUR_QUADRANT;
 	four_quadrant_control_mode CONSTANT_PQ;
 	generator_status ONLINE;
@@ -1907,7 +1907,7 @@ object inverter {
 	name inv_30C;
 	parent inv_30_meter;
 	phases CN;
-	rated_power 180000.0;
+	rated_power 240000.0;
 	inverter_type FOUR_QUADRANT;
 	four_quadrant_control_mode CONSTANT_PQ;
 	generator_status ONLINE;
