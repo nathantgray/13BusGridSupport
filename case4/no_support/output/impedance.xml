@@ -8,7 +8,7 @@
 		<from_node>meter:source_equivalence</from_node>
 		<to_node>meter:node_1</to_node>
 		<from_voltage>2497.848205</from_voltage>
-		<to_voltage>2460.297582</to_voltage>
+		<to_voltage>2229.796841</to_voltage>
 		<phases>ABCN</phases>
 		<length>5280.000000000000000</length>
 		<a_matrix>
@@ -23,15 +23,15 @@
 			<a33>+1.000000000000000+0.000000000000000j</a33>
 		</a_matrix>
 		<b_matrix>
-			<b11>+0.000000000000000+0.260000000000000j</b11>
+			<b11>+0.000000000000000+1.500000000000000j</b11>
 			<b12>+0.000000000000000+0.000000000000000j</b12>
 			<b13>+0.000000000000000+0.000000000000000j</b13>
 			<b21>+0.000000000000000+0.000000000000000j</b21>
-			<b22>+0.000000000000000+0.260000000000000j</b22>
+			<b22>+0.000000000000000+1.500000000000000j</b22>
 			<b23>+0.000000000000000+0.000000000000000j</b23>
 			<b31>+0.000000000000000+0.000000000000000j</b31>
 			<b32>+0.000000000000000+0.000000000000000j</b32>
-			<b33>+0.000000000000000+0.260000000000000j</b33>
+			<b33>+0.000000000000000+1.500000000000000j</b33>
 		</b_matrix>
 		<c_matrix>
 			<c11>+0.000000000000000+0.000000000000000j</c11>
@@ -67,15 +67,15 @@
 			<A33>+1.000000000000000+0.000000000000000j</A33>
 		</A_matrix>
 		<B_matrix>
-			<B11>+0.000000000000000+0.260000000000000j</B11>
+			<B11>+0.000000000000000+1.500000000000000j</B11>
 			<B12>+0.000000000000000+0.000000000000000j</B12>
 			<B13>+0.000000000000000+0.000000000000000j</B13>
 			<B21>+0.000000000000000+0.000000000000000j</B21>
-			<B22>+0.000000000000000+0.260000000000000j</B22>
+			<B22>+0.000000000000000+1.500000000000000j</B22>
 			<B23>+0.000000000000000+0.000000000000000j</B23>
 			<B31>+0.000000000000000+0.000000000000000j</B31>
 			<B32>+0.000000000000000+0.000000000000000j</B32>
-			<B33>+0.000000000000000+0.260000000000000j</B33>
+			<B33>+0.000000000000000+1.500000000000000j</B33>
 		</B_matrix>
 	</overhead_line>
 	<overhead_line>
@@ -83,8 +83,8 @@
 		<id>overhead_line:28</id>
 		<from_node>meter:node_1</from_node>
 		<to_node>meter:node_2</to_node>
-		<from_voltage>2460.297582</from_voltage>
-		<to_voltage>2411.889968</to_voltage>
+		<from_voltage>2229.796841</from_voltage>
+		<to_voltage>2174.188942</to_voltage>
 		<phases>ABCN</phases>
 		<length>5280.000000000000000</length>
 		<a_matrix>
@@ -159,8 +159,8 @@
 		<id>overhead_line:29</id>
 		<from_node>meter:node_2</from_node>
 		<to_node>meter:node_3</to_node>
-		<from_voltage>2461.470007</from_voltage>
-		<to_voltage>2450.555569</to_voltage>
+		<from_voltage>2334.100571</from_voltage>
+		<to_voltage>2322.693860</to_voltage>
 		<phases>BCN</phases>
 		<length>5280.000000000000000</length>
 		<a_matrix>
@@ -235,8 +235,8 @@
 		<id>overhead_line:30</id>
 		<from_node>meter:node_3</from_node>
 		<to_node>meter:node_4</to_node>
-		<from_voltage>2450.555569</from_voltage>
-		<to_voltage>2448.581269</to_voltage>
+		<from_voltage>2322.693860</from_voltage>
+		<to_voltage>2320.676223</to_voltage>
 		<phases>BCN</phases>
 		<length>5280.000000000000000</length>
 		<a_matrix>
@@ -311,8 +311,8 @@
 		<id>overhead_line:31</id>
 		<from_node>meter:node_2</from_node>
 		<to_node>meter:node_5</to_node>
-		<from_voltage>2411.889968</from_voltage>
-		<to_voltage>2402.806690</to_voltage>
+		<from_voltage>2174.188942</from_voltage>
+		<to_voltage>2163.873757</to_voltage>
 		<phases>ABCN</phases>
 		<length>5280.000000000000000</length>
 		<a_matrix>
@@ -387,8 +387,8 @@
 		<id>overhead_line:32</id>
 		<from_node>meter:node_5</from_node>
 		<to_node>meter:node_6</to_node>
-		<from_voltage>2402.806690</from_voltage>
-		<to_voltage>2374.732962</to_voltage>
+		<from_voltage>2163.873757</from_voltage>
+		<to_voltage>2132.214790</to_voltage>
 		<phases>ABCN</phases>
 		<length>5280.000000000000000</length>
 		<a_matrix>
@@ -463,8 +463,8 @@
 		<id>overhead_line:33</id>
 		<from_node>meter:node_6</from_node>
 		<to_node>meter:node_7</to_node>
-		<from_voltage>2374.732962</from_voltage>
-		<to_voltage>2374.536881</to_voltage>
+		<from_voltage>2132.214790</from_voltage>
+		<to_voltage>2131.932439</to_voltage>
 		<phases>ABCN</phases>
 		<length>5280.000000000000000</length>
 		<a_matrix>
@@ -539,8 +539,8 @@
 		<id>overhead_line:34</id>
 		<from_node>meter:node_17</from_node>
 		<to_node>meter:node_24</to_node>
-		<from_voltage>2374.538568</from_voltage>
-		<to_voltage>2374.519009</to_voltage>
+		<from_voltage>2131.934319</from_voltage>
+		<to_voltage>2131.906158</to_voltage>
 		<phases>ABCN</phases>
 		<length>5280.000000000000000</length>
 		<a_matrix>
@@ -615,8 +615,8 @@
 		<id>overhead_line:35</id>
 		<from_node>meter:node_24</from_node>
 		<to_node>meter:node_25</to_node>
-		<from_voltage>2374.519009</from_voltage>
-		<to_voltage>2373.671705</to_voltage>
+		<from_voltage>2131.906158</from_voltage>
+		<to_voltage>2130.948311</to_voltage>
 		<phases>ABCN</phases>
 		<length>5280.000000000000000</length>
 		<a_matrix>
@@ -691,8 +691,8 @@
 		<id>overhead_line:36</id>
 		<from_node>meter:node_24</from_node>
 		<to_node>meter:node_26</to_node>
-		<from_voltage>2374.519009</from_voltage>
-		<to_voltage>2375.269382</to_voltage>
+		<from_voltage>2131.906158</from_voltage>
+		<to_voltage>2132.724564</to_voltage>
 		<phases>ABCN</phases>
 		<length>5280.000000000000000</length>
 		<a_matrix>
@@ -767,8 +767,8 @@
 		<id>overhead_line:37</id>
 		<from_node>meter:node_6</from_node>
 		<to_node>meter:node_8</to_node>
-		<from_voltage>2374.732962</from_voltage>
-		<to_voltage>2372.317346</to_voltage>
+		<from_voltage>2132.214790</from_voltage>
+		<to_voltage>2129.525328</to_voltage>
 		<phases>ACN</phases>
 		<length>5280.000000000000000</length>
 		<a_matrix>
@@ -843,8 +843,8 @@
 		<id>overhead_line:38</id>
 		<from_node>meter:node_8</from_node>
 		<to_node>meter:node_9</to_node>
-		<from_voltage>2347.911769</from_voltage>
-		<to_voltage>2345.498695</to_voltage>
+		<from_voltage>2104.760891</from_voltage>
+		<to_voltage>2102.067813</to_voltage>
 		<phases>CN</phases>
 		<length>5280.000000000000000</length>
 		<a_matrix>
@@ -919,8 +919,8 @@
 		<id>overhead_line:39</id>
 		<from_node>meter:node_8</from_node>
 		<to_node>meter:node_10</to_node>
-		<from_voltage>2372.317346</from_voltage>
-		<to_voltage>2367.288602</to_voltage>
+		<from_voltage>2129.525328</from_voltage>
+		<to_voltage>2123.920054</to_voltage>
 		<phases>AN</phases>
 		<length>5280.000000000000000</length>
 		<a_matrix>
@@ -995,8 +995,8 @@
 		<id>overhead_line:40</id>
 		<from_node>meter:node_11</from_node>
 		<to_node>meter:node_12</to_node>
-		<from_voltage>2374.725969</from_voltage>
-		<to_voltage>2367.442614</to_voltage>
+		<from_voltage>2132.207001</from_voltage>
+		<to_voltage>2124.099452</to_voltage>
 		<phases>ABCN</phases>
 		<length>5280.000000000000000</length>
 		<a_matrix>
@@ -1071,8 +1071,8 @@
 		<id>overhead_line:41</id>
 		<from_node>meter:node_16</from_node>
 		<to_node>meter:node_21</to_node>
-		<from_voltage>2367.444305</from_voltage>
-		<to_voltage>2367.424536</to_voltage>
+		<from_voltage>2124.101338</from_voltage>
+		<to_voltage>2124.072906</to_voltage>
 		<phases>ABCN</phases>
 		<length>5280.000000000000000</length>
 		<a_matrix>
@@ -1147,8 +1147,8 @@
 		<id>overhead_line:42</id>
 		<from_node>meter:node_21</from_node>
 		<to_node>meter:node_22</to_node>
-		<from_voltage>2367.424536</from_voltage>
-		<to_voltage>2366.574239</to_voltage>
+		<from_voltage>2124.072906</from_voltage>
+		<to_voltage>2123.110887</to_voltage>
 		<phases>ABCN</phases>
 		<length>5280.000000000000000</length>
 		<a_matrix>
@@ -1223,8 +1223,8 @@
 		<id>overhead_line:43</id>
 		<from_node>meter:node_21</from_node>
 		<to_node>meter:node_23</to_node>
-		<from_voltage>2367.424536</from_voltage>
-		<to_voltage>2368.176859</to_voltage>
+		<from_voltage>2124.072906</from_voltage>
+		<to_voltage>2124.894146</to_voltage>
 		<phases>ABCN</phases>
 		<length>5280.000000000000000</length>
 		<a_matrix>
@@ -1299,8 +1299,8 @@
 		<id>overhead_line:44</id>
 		<from_node>meter:node_2</from_node>
 		<to_node>meter:node_13</to_node>
-		<from_voltage>2411.889968</from_voltage>
-		<to_voltage>2408.337736</to_voltage>
+		<from_voltage>2174.188942</from_voltage>
+		<to_voltage>2170.147305</to_voltage>
 		<phases>ABCN</phases>
 		<length>5280.000000000000000</length>
 		<a_matrix>
@@ -1375,8 +1375,8 @@
 		<id>overhead_line:45</id>
 		<from_node>meter:node_13</from_node>
 		<to_node>meter:node_14</to_node>
-		<from_voltage>2408.337736</from_voltage>
-		<to_voltage>2379.493933</to_voltage>
+		<from_voltage>2170.147305</from_voltage>
+		<to_voltage>2138.034644</to_voltage>
 		<phases>ABCN</phases>
 		<length>5280.000000000000000</length>
 		<a_matrix>
@@ -1451,8 +1451,8 @@
 		<id>overhead_line:46</id>
 		<from_node>meter:node_15</from_node>
 		<to_node>meter:node_18</to_node>
-		<from_voltage>2408.339399</from_voltage>
-		<to_voltage>2408.321599</to_voltage>
+		<from_voltage>2170.149151</from_voltage>
+		<to_voltage>2170.123619</to_voltage>
 		<phases>ABCN</phases>
 		<length>5280.000000000000000</length>
 		<a_matrix>
@@ -1527,8 +1527,8 @@
 		<id>overhead_line:47</id>
 		<from_node>meter:node_18</from_node>
 		<to_node>meter:node_19</to_node>
-		<from_voltage>2408.321599</from_voltage>
-		<to_voltage>2407.488937</to_voltage>
+		<from_voltage>2170.123619</from_voltage>
+		<to_voltage>2169.184095</to_voltage>
 		<phases>ABCN</phases>
 		<length>5280.000000000000000</length>
 		<a_matrix>
@@ -1603,8 +1603,8 @@
 		<id>overhead_line:48</id>
 		<from_node>meter:node_18</from_node>
 		<to_node>meter:node_20</to_node>
-		<from_voltage>2408.321599</from_voltage>
-		<to_voltage>2409.066065</to_voltage>
+		<from_voltage>2170.123619</from_voltage>
+		<to_voltage>2170.936725</to_voltage>
 		<phases>ABCN</phases>
 		<length>5280.000000000000000</length>
 		<a_matrix>
@@ -1679,8 +1679,8 @@
 		<id>switch:5</id>
 		<from_node>node:node_0</from_node>
 		<to_node>meter:node_1</to_node>
-		<from_voltage>2460.297582</from_voltage>
-		<to_voltage>2460.297582</to_voltage>
+		<from_voltage>2229.796841</from_voltage>
+		<to_voltage>2229.796841</to_voltage>
 		<phases>ABCN</phases>
 		<a_matrix>
 			<a11>+1.000000000000000+0.000000000000000j</a11>
@@ -1754,8 +1754,8 @@
 		<id>switch:49</id>
 		<from_node>meter:node_7</from_node>
 		<to_node>meter:node_17</to_node>
-		<from_voltage>2374.536881</from_voltage>
-		<to_voltage>2374.538568</to_voltage>
+		<from_voltage>2131.932439</from_voltage>
+		<to_voltage>2131.934319</to_voltage>
 		<phases>ABCN</phases>
 		<a_matrix>
 			<a11>+1.000000000000000+0.000000000000000j</a11>
@@ -1829,8 +1829,8 @@
 		<id>switch:50</id>
 		<from_node>meter:node_6</from_node>
 		<to_node>meter:node_11</to_node>
-		<from_voltage>2374.732962</from_voltage>
-		<to_voltage>2374.725969</to_voltage>
+		<from_voltage>2132.214790</from_voltage>
+		<to_voltage>2132.207001</to_voltage>
 		<phases>ABCN</phases>
 		<a_matrix>
 			<a11>+1.000000000000000+0.000000000000000j</a11>
@@ -1904,8 +1904,8 @@
 		<id>switch:51</id>
 		<from_node>meter:node_12</from_node>
 		<to_node>meter:node_16</to_node>
-		<from_voltage>2367.442614</from_voltage>
-		<to_voltage>2367.444305</to_voltage>
+		<from_voltage>2124.099452</from_voltage>
+		<to_voltage>2124.101338</to_voltage>
 		<phases>ABCN</phases>
 		<a_matrix>
 			<a11>+1.000000000000000+0.000000000000000j</a11>
@@ -1979,8 +1979,8 @@
 		<id>switch:52</id>
 		<from_node>meter:node_13</from_node>
 		<to_node>meter:node_15</to_node>
-		<from_voltage>2408.337736</from_voltage>
-		<to_voltage>2408.339399</to_voltage>
+		<from_voltage>2170.147305</from_voltage>
+		<to_voltage>2170.149151</to_voltage>
 		<phases>ABCN</phases>
 		<a_matrix>
 			<a11>+1.000000000000000+0.000000000000000j</a11>
@@ -2054,8 +2054,8 @@
 		<id>switch:53</id>
 		<from_node>meter:node_5</from_node>
 		<to_node>meter:node_27</to_node>
-		<from_voltage>2402.806690</from_voltage>
-		<to_voltage>2402.806690</to_voltage>
+		<from_voltage>2163.873757</from_voltage>
+		<to_voltage>2163.873757</to_voltage>
 		<phases>ABCN</phases>
 		<a_matrix>
 			<a11>+1.000000000000000+0.000000000000000j</a11>
@@ -2129,8 +2129,8 @@
 		<id>switch:54</id>
 		<from_node>meter:node_27</from_node>
 		<to_node>meter:node_29</to_node>
-		<from_voltage>2402.806690</from_voltage>
-		<to_voltage>2402.806690</to_voltage>
+		<from_voltage>2163.873757</from_voltage>
+		<to_voltage>2163.873757</to_voltage>
 		<phases>ABCN</phases>
 		<a_matrix>
 			<a11>+1.000000000000000+0.000000000000000j</a11>
@@ -2204,8 +2204,8 @@
 		<id>switch:55</id>
 		<from_node>meter:node_11</from_node>
 		<to_node>meter:node_28</to_node>
-		<from_voltage>2374.725969</from_voltage>
-		<to_voltage>2374.725969</to_voltage>
+		<from_voltage>2132.207001</from_voltage>
+		<to_voltage>2132.207001</to_voltage>
 		<phases>ABCN</phases>
 		<a_matrix>
 			<a11>+1.000000000000000+0.000000000000000j</a11>
@@ -2279,8 +2279,8 @@
 		<id>switch:56</id>
 		<from_node>meter:node_28</from_node>
 		<to_node>meter:node_30</to_node>
-		<from_voltage>2374.725969</from_voltage>
-		<to_voltage>2374.725969</to_voltage>
+		<from_voltage>2132.207001</from_voltage>
+		<to_voltage>2132.207001</to_voltage>
 		<phases>ABCN</phases>
 		<a_matrix>
 			<a11>+1.000000000000000+0.000000000000000j</a11>

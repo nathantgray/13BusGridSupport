@@ -3,6 +3,20 @@ import numpy as np
 from pathlib import Path
 
 
+def symmetrical_components(v_3ph):
+    v_3ph_ = np.array([np.array(v_3ph).flatten()]).T
+    a = np.exp(120*np.pi/180*1j)
+    c = 1/3*np.array(
+        [
+            [1, 1, 1],
+            [1, a, a**2],
+            [1, a**2, a],
+        ]
+    )
+    v_seq = c @ v_3ph_
+    return v_seq.flatten()
+
+
 def process_v(volt_dump, v_ln_base):
     if 'voltA_mag' in volt_dump.keys():  # polar format
         volt_dump.loc[:, ['voltA_mag', 'voltB_mag', 'voltC_mag']] /= v_ln_base
@@ -41,7 +55,7 @@ if __name__ == '__main__':
     i_base = s_base / v_base
     v_df = pd.DataFrame()
     s_df = pd.DataFrame()
-    for i in range(1, 6):
+    for i in range(0, 6):
         # get_data(f"case{i}/support/output")
         v_support = pd.read_csv(Path(f"case{i}/support/output/output_voltage.csv"), header=1, index_col=0)
         v_support = process_v(v_support, v_base)
@@ -51,13 +65,20 @@ if __name__ == '__main__':
         i_support = process_i(i_support, i_base)
         i_no_support = pd.read_csv(Path(f"case{i}/no_support/output/output_current.csv"), header=1, index_col=0)
         i_no_support = process_i(i_no_support, i_base)
-
+        v_sym = symmetrical_components(v_no_support.loc['node_1', ['a', 'b', 'c']].values)[1]
         v_df.loc[f'case{i}_no_support', ['a', 'b', 'c']] = \
             v_no_support.loc['node_1', ['voltA_mag', 'voltB_mag', 'voltC_mag']].values.real
+        v_df.loc[f'case{i}_no_support', ['0', '1', '2']] = \
+            np.abs(symmetrical_components(v_no_support.loc['node_1', ['a', 'b', 'c']].values))
         v_df.loc[f'case{i}', ['a', 'b', 'c']] = v_support.loc['node_1', ['voltA_mag', 'voltB_mag', 'voltC_mag']].values.real
+        v_df.loc[f'case{i}', ['0', '1', '2']] = \
+            np.abs(symmetrical_components(v_support.loc['node_1', ['a', 'b', 'c']].values))
         v_df.loc[f'case{i}_increase', ['a', 'b', 'c']] = \
             v_support.loc['node_1', ['voltA_mag', 'voltB_mag', 'voltC_mag']].values.real - \
             v_no_support.loc['node_1', ['voltA_mag', 'voltB_mag', 'voltC_mag']].values.real
+        v_df.loc[f'case{i}_increase', ['0', '1', '2']] = \
+            np.abs(symmetrical_components(v_support.loc['node_1', ['a', 'b', 'c']].values)) - \
+            np.abs(symmetrical_components(v_no_support.loc['node_1', ['a', 'b', 'c']].values))
 
         load = v_support.loc['node_1', ['a', 'b', 'c']] * np.conj(i_support.loc['oh_line_1_2', ['a', 'b', 'c']])
         load_no_support = \

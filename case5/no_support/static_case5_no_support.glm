@@ -55,15 +55,15 @@ object meter {
 
 object line_configuration {
 	name transmission_equivalence;
-	z11 0+0.3467j;
+	z11 0+2j;
 	z12 0+0j;
 	z13 0+0j;
 	z21 0+0j;
-	z22 0+0.3467j;
+	z22 0+2j;
 	z23 0+0j;
 	z31 0+0j;
 	z32 0+0j;
-	z33 0+0.3467j;
+	z33 0+2j;
 }// transmission_equivalence
 
 object switch {
