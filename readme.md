@@ -1,6 +1,6 @@
 # 13-Bus for Grid Support v2
 
-<img src="13busGridSupport.png" width="500"/>
+<img src="13bus-for-paper.png" width="500"/>
 
 ## Transmission equivalence
 The transmission system is represented as an equivalent impedance and source as seen from the distribution system, 

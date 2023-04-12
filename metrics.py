@@ -77,11 +77,11 @@ if __name__ == '__main__':
     s_df = pd.DataFrame()
     for i in range(1, 6):
         # get_data(f"case{i}/support/output")
-        v_support = pd.read_csv(Path(f"case{i}/support/output/output_voltage.csv"), header=1, index_col=0)
+        v_support = pd.read_csv(Path(f"case{i}/LLNL_support/output/output_voltage.csv"), header=1, index_col=0)
         v_support = process_v(v_support, v_base)
         v_no_support = pd.read_csv(Path(f"case{i}/no_support/output/output_voltage.csv"), header=1, index_col=0)
         v_no_support = process_v(v_no_support, v_base)
-        i_support = pd.read_csv(Path(f"case{i}/support/output/output_current.csv"), header=1, index_col=0)
+        i_support = pd.read_csv(Path(f"case{i}/LLNL_support/output/output_current.csv"), header=1, index_col=0)
         i_support = process_i(i_support, i_base)
         i_no_support = pd.read_csv(Path(f"case{i}/no_support/output/output_current.csv"), header=1, index_col=0)
         i_no_support = process_i(i_no_support, i_base)
@@ -133,11 +133,11 @@ if __name__ == '__main__':
 
         q_reserve = (s_rated ** 2 - p_out ** 2) ** 0.5
         inv_df = pd.DataFrame()
-        inv_20 = pd.read_csv(Path(f"case{i}/support/output/inv_20_meter.csv"), header=8)
-        inv_23 = pd.read_csv(Path(f"case{i}/support/output/inv_23_meter.csv"), header=8)
-        inv_26 = pd.read_csv(Path(f"case{i}/support/output/inv_26_meter.csv"), header=8)
-        inv_29 = pd.read_csv(Path(f"case{i}/support/output/inv_29_meter.csv"), header=8)
-        inv_30 = pd.read_csv(Path(f"case{i}/support/output/inv_30_meter.csv"), header=8)
+        inv_20 = pd.read_csv(Path(f"case{i}/LLNL_support/output/inv_20_meter.csv"), header=8)
+        inv_23 = pd.read_csv(Path(f"case{i}/LLNL_support/output/inv_23_meter.csv"), header=8)
+        inv_26 = pd.read_csv(Path(f"case{i}/LLNL_support/output/inv_26_meter.csv"), header=8)
+        inv_29 = pd.read_csv(Path(f"case{i}/LLNL_support/output/inv_29_meter.csv"), header=8)
+        inv_30 = pd.read_csv(Path(f"case{i}/LLNL_support/output/inv_30_meter.csv"), header=8)
         inv_df.loc['inv20', ['a', 'b', 'c']] = parse_phasors(inv_20.iloc[0, 1:].values)
         inv_df.loc['inv23', ['a', 'b', 'c']] = parse_phasors(inv_23.iloc[0, 1:].values)
         inv_df.loc['inv26', ['a', 'b', 'c']] = parse_phasors(inv_26.iloc[0, 1:].values)
@@ -150,5 +150,7 @@ if __name__ == '__main__':
         print(f"Case {i} Fairness={fairness}")
     print(v_df)
     print(s_df)
+
+
 
     pass
