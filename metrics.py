@@ -107,7 +107,7 @@ if __name__ == '__main__':
         p = load.values.real
         q_no_support = load_no_support.values.imag
         p_no_support = load_no_support.values.real
-
+        print(q_no_support.sum())
         s_df.loc[f'case{i}_no_support', 'p'] = p_no_support.sum()
         s_df.loc[f'case{i}', 'p'] = p.sum()
         s_df.loc[f'case{i}_delta', 'p'] = p.sum() - p_no_support.sum()
