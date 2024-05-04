@@ -22,11 +22,11 @@ total_reserve = np.sum(q_reserve)
 print(total_reserve)
 pnnl_dispatch = []
 pnnl_fairness = []
-for i in range(len(q_support)):
-    fair_fraction = q_support[i] / total_reserve
-    print(fair_fraction)
-    pnnl_dispatch.append(fair_fraction * q_reserve)
-    pnnl_fairness.append(np.mean(np.sum(pnnl_dispatch[i]/q_reserve, axis=1)) ** 2 / np.mean(np.sum(pnnl_dispatch[i]/q_reserve, axis=1) ** 2))
+for case_i in range(len(q_support)):
+    total_fraction_of_reserve_needed = q_support[case_i] / total_reserve
+    print(total_fraction_of_reserve_needed)
+    pnnl_dispatch.append(total_fraction_of_reserve_needed * q_reserve)
+    pnnl_fairness.append(np.mean(np.sum(pnnl_dispatch[case_i] / q_reserve, axis=1)) ** 2 / np.mean(np.sum(pnnl_dispatch[case_i] / q_reserve, axis=1) ** 2))
 # pnnl_fairness = np.mean(np.sum(fair_fractions, axis=1)) ** 2 / np.mean(np.sum(fair_fractions, axis=1) ** 2)
 # %%
 for i_case in range(len(q_support)):
@@ -50,8 +50,8 @@ llnl_table_strs = [
 
 llnl_dispatches = []
 
-for i in range(5):
-    table_str = llnl_table_strs[i]
+for case_i in range(5):
+    table_str = llnl_table_strs[case_i]
     table_str = table_str.replace("{", "").replace("}", "").replace("}", "").replace(" ", "").split("&")
     a = np.zeros((5, 3))
     for j, q in enumerate(table_str):
@@ -70,7 +70,7 @@ llnl_dispatch_1 = 1e3*np.array([
 ])
 
 llnl_fairness = []
-for i in range(len(q_support)):
-    fair_fraction = q_support[i] / total_reserve
-    print(fair_fraction)
-    llnl_fairness.append(np.mean(np.sum(llnl_dispatches[i]/q_reserve, axis=1)) ** 2 / np.mean(np.sum(llnl_dispatches[i]/q_reserve, axis=1) ** 2))
+for case_i in range(len(q_support)):
+    total_fraction_of_reserve_needed = q_support[case_i] / total_reserve
+    print(total_fraction_of_reserve_needed)
+    llnl_fairness.append(np.mean(np.sum(llnl_dispatches[case_i] / q_reserve, axis=1)) ** 2 / np.mean(np.sum(llnl_dispatches[case_i] / q_reserve, axis=1) ** 2))
